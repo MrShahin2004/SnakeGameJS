@@ -1,0 +1,21 @@
+{
+  "name": "snakegamejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrShahin2004/SnakeGameJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MrShahin2004/SnakeGameJS/issues"
+  },
+  "homepage": "https://github.com/MrShahin2004/SnakeGameJS#readme"
+}
