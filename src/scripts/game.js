@@ -11,7 +11,7 @@ let CANVAS_SIZE = GRID_SIZE * CELL_SIZE;
 Canvas.width = CANVAS_SIZE;
 Canvas.height = CANVAS_SIZE;
 
-CTX.fillRect(100, 200, 150, 200);
+CTX.fillRect(100, 200, 200, 200);
 
 function Update() {
     console.log("Updating game states...");
