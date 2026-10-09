@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/MrShahin2004/SnakeGameJS/issues"
   },
-  "homepage": "https://github.com/MrShahin2004/SnakeGameJS#readme"
+  "homepage": "https://github.com/MrShahin2004/SnakeGameJS#readme",
+  "devDependencies": {
+    "electron": "^44.7.0"
+  }
 }
