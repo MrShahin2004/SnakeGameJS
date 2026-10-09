@@ -12,3 +12,20 @@ Canvas.width = CANVAS_SIZE;
 Canvas.height = CANVAS_SIZE;
 
 CTX.fillRect(100, 200, 150, 200);
+
+function Update() {
+    console.log("Updating game states...");
+}
+
+function Render() {
+    console.log("Rendering game visuals...");
+}
+
+function EnforceGameLoop() {
+    Update();
+    Render();
+
+    requestAnimationFrame(EnforceGameLoop);
+}
+
+requestAnimationFrame(EnforceGameLoop);
