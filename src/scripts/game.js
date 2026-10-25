@@ -34,10 +34,32 @@ function UpdateState() {
     // Will be implemented later.
 }
 
+// Displaying Grid Lines
+function DisplayGridLines() {
+    DrawingContext.strokeStyle = "#333333";
+    DrawingContext.lineWidth = 1;
+
+    for (let Index = 0; Index <= GridSize; Index++) {
+        let Position = Index * CellSize;
+
+        DrawingContext.beginPath();
+        DrawingContext.moveTo(Position, 0);
+        DrawingContext.lineTo(Position, CanvasSize);
+        DrawingContext.stroke();
+
+        DrawingContext.beginPath();
+        DrawingContext.moveTo(0, Position);
+        DrawingContext.lineTo(CanvasSize, Position);
+        DrawingContext.stroke();
+    }
+}
+
 // Rendering Games
 function RenderVisual() {
     // Clearing Whole Canvas First
     DrawingContext.clearRect(0, 0, CanvasSize, CanvasSize);
+
+    DisplayGridLines();
 
     // Drawing Snake
     DrawingContext.fillStyle = "green";
