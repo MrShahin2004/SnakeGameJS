@@ -4,7 +4,9 @@ const $ = document;
 const GameCanvas = $.getElementById("GameCanvas");
 const DrawingContext = GameCanvas.getContext("2d");
 
-DrawingContext.fillStyle = "purple";
-DrawingContext.fillRect(10, 20, 300, 400);
+const GridSize = 20;
+const CellSize = 20;
+const CanvasSize = GridSize * CellSize;
 
-console.log(GameCanvas.width, GameCanvas.height);
+GameCanvas.width = CanvasSize;
+GameCanvas.height = CanvasSize;
