@@ -15,13 +15,19 @@ GameCanvas.width = CanvasSize;
 GameCanvas.height = CanvasSize;
 
 // Snake Data
-let Snake = {
-    head: {
-        // Position of Head Based on Grid, not Pixels
-        xGrid: 6,
-        yGrid: 4
-    }
+let Snake = [
+    { gridX: 8, gridY: 10 },
+    { gridX: 9, gridY: 10 },
+    { gridX: 10, gridY: 10 }
+];
+
+// Rendering Function
+function RenderGame() {
+    DrawingContext.fillStyle = "green";
+
+    Snake.forEach((BodySegment) => {
+        DrawingContext.fillRect(BodySegment.gridX * CellSize, BodySegment.gridY * CellSize, CellSize, CellSize);
+    });
 }
 
-// Converting the Grid Coordinates to Pixel Coordinates
-DrawingContext.fillRect(Snake.head.xGrid * CellSize, Snake.head.yGrid * CellSize, CellSize, CellSize);
+RenderGame();
