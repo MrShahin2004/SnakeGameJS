@@ -21,13 +21,41 @@ let Snake = [
     { gridX: 10, gridY: 10 }
 ];
 
-// Rendering Function
-function RenderGame() {
-    DrawingContext.fillStyle = "green";
+// Food Data
+let Food = { gridX: 10, gridY: 14 };
 
+// Getting Input
+function GetInput() {
+    // Will be implemented later.
+}
+
+// Updating States
+function UpdateState() {
+    // Will be implemented later.
+}
+
+// Rendering Games
+function RenderVisual() {
+    // Clearing Whole Canvas First
+    DrawingContext.clearRect(0, 0, CanvasSize, CanvasSize);
+
+    // Drawing Snake
+    DrawingContext.fillStyle = "green";
     Snake.forEach((BodySegment) => {
         DrawingContext.fillRect(BodySegment.gridX * CellSize, BodySegment.gridY * CellSize, CellSize, CellSize);
     });
+
+    // Drawing Food
+    DrawingContext.fillStyle = "red";
+    DrawingContext.fillRect(Food.gridX * CellSize, Food.gridY * CellSize, CellSize, CellSize);
 }
 
-RenderGame();
+function EnforceGameLoop() {
+    GetInput();
+    UpdateState();
+    RenderVisual();
+
+    requestAnimationFrame(EnforceGameLoop);
+}
+
+requestAnimationFrame(EnforceGameLoop);
