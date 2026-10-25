@@ -13,6 +13,10 @@ Canvas.height = CANVAS_SIZE;
 
 CTX.fillRect(100, 200, 200, 200);
 
+function Input() {
+    console.log("Receiving player input...");
+}
+
 function Update() {
     console.log("Updating game states...");
 }
@@ -22,6 +26,7 @@ function Render() {
 }
 
 function EnforceGameLoop() {
+    Input();
     Update();
     Render();
 
