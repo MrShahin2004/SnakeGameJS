@@ -41,6 +41,10 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# Agent and other tools files
+.playwright-mcp/
+graphify-out/
+
 # OS generated files
 .DS_Store
 .DS_Store?
