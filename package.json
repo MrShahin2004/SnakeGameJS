@@ -1,8 +1,8 @@
 {
   "name": "snakegamejs",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "description": "A simple snake game build with vanilla JS and Electron framework.",
+  "main": "./main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron ."
@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/MrShahin2004/SnakeGameJS#readme",
   "devDependencies": {
-    "electron": "^44.7.0"
+    "electron": "^45.3.3"
   }
 }
