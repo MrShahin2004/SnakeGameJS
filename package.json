@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/MrShahin2004/SnakeGameJS#readme",
   "devDependencies": {
-    "electron": "^45.3.3"
+    "electron": "^44.11.4"
   }
 }
