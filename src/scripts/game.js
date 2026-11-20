@@ -21,6 +21,7 @@ let Snake = [
   { gridX: 10, gridY: 10 },
 ];
 
+// Generating a Random Position for Food
 function GenerateRandomFoodPosition() {
   return {
     gridX: Math.floor(Math.random() * GridSize),
