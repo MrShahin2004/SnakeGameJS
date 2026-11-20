@@ -54,7 +54,7 @@ function DisplayGridLines() {
   }
 }
 
-// Rendering Games
+// Rendering the Game
 function RenderVisual() {
   // Clearing Whole Canvas First
   DrawingContext.clearRect(0, 0, CanvasSize, CanvasSize);
