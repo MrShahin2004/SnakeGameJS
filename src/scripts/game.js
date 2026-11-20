@@ -21,8 +21,15 @@ let Snake = [
   { gridX: 10, gridY: 10 },
 ];
 
+function GenerateRandomFoodPosition() {
+  return {
+    gridX: Math.floor(Math.random() * GridSize),
+    gridY: Math.floor(Math.random() * CellSize),
+  };
+}
+
 // Food Data
-let Food = { gridX: 10, gridY: 14 };
+let Food = GenerateRandomFoodPosition();
 
 // Getting Input
 function GetInput() {
