@@ -43,6 +43,7 @@ lerna-debug.log*
 
 # Agent and other tools files
 .playwright-mcp/
+.ua/
 graphify-out/
 
 # OS generated files
