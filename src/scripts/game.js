@@ -90,7 +90,7 @@ function RenderVisual() {
   );
 }
 
-function EnforceGameLoop() {
+function ExecuteGameLoop() {
   GetInput();
   UpdateState();
   RenderVisual();
@@ -98,4 +98,4 @@ function EnforceGameLoop() {
   requestAnimationFrame(EnforceGameLoop);
 }
 
-requestAnimationFrame(EnforceGameLoop);
+requestAnimationFrame(ExecuteGameLoop);
