@@ -96,7 +96,7 @@ function ExecuteGameLoop() {
   UpdateState();
   RenderVisual();
 
-  requestAnimationFrame(EnforceGameLoop);
+  requestAnimationFrame(ExecuteGameLoop);
 }
 
 requestAnimationFrame(ExecuteGameLoop);
