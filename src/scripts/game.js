@@ -90,6 +90,7 @@ function RenderVisual() {
   );
 }
 
+// Running the Game Loop
 function ExecuteGameLoop() {
   GetInput();
   UpdateState();
