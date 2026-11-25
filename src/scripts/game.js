@@ -103,10 +103,18 @@ function RenderVisual() {
   );
 }
 
+let MoveInterval = 150;
+let LastMoveTime = 0;
+
 // Running the Game Loop
-function ExecuteGameLoop() {
-  GetInput();
-  UpdateState();
+function ExecuteGameLoop(CurrentTime) {
+  // GetInput();
+  
+  if (CurrentTime - LastMoveTime >= MoveInterval) {
+    UpdateState();
+    LastMoveTime = CurrentTime;
+  }
+
   RenderVisual();
 
   requestAnimationFrame(ExecuteGameLoop);
