@@ -16,14 +16,14 @@ GameCanvas.height = CanvasSize;
 
 // Snake Data
 let Snake = [
-  { GridX: 8, GridY: 10 },
-  { GridX: 9, GridY: 10 },
   { GridX: 10, GridY: 10 },
+  { GridX: 9, GridY: 10 },
+  { GridX: 8, GridY: 10 },
 ];
 
 let MovementDirection = {
-  x: 1,
-  y: 0,
+  X: 1,
+  Y: 0,
 };
 
 // Generating a Random Position for Food
@@ -44,7 +44,15 @@ function GetInput() {
 
 // Updating States
 function UpdateState() {
-  // Will be implemented later.
+  let Head = Snake[0];
+
+  let NewHead = {
+    X: Head.GridX + MovementDirection.X,
+    Y: Head.GridY + MovementDirection.Y,
+  };
+
+  Snake.unshift(NewHead);
+  Snake.pop();
 }
 
 // Displaying Grid Lines
