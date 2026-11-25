@@ -21,7 +21,12 @@ let Snake = [
   { GridX: 8, GridY: 10 },
 ];
 
-let MovementDirection = {
+let CurrentMovementDirection = {
+  X: 1,
+  Y: 0,
+};
+
+let NextMovementDirection = {
   X: 1,
   Y: 0,
 };
