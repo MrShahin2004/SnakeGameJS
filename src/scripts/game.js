@@ -16,16 +16,21 @@ GameCanvas.height = CanvasSize;
 
 // Snake Data
 let Snake = [
-  { gridX: 8, gridY: 10 },
-  { gridX: 9, gridY: 10 },
-  { gridX: 10, gridY: 10 },
+  { GridX: 8, GridY: 10 },
+  { GridX: 9, GridY: 10 },
+  { GridX: 10, GridY: 10 },
 ];
+
+let MovementDirection = {
+  x: 1,
+  y: 0,
+};
 
 // Generating a Random Position for Food
 function GenerateRandomFoodPosition() {
   return {
-    gridX: Math.floor(Math.random() * GridSize),
-    gridY: Math.floor(Math.random() * CellSize),
+    GridX: Math.floor(Math.random() * GridSize),
+    GridY: Math.floor(Math.random() * CellSize),
   };
 }
 
@@ -73,8 +78,8 @@ function RenderVisual() {
   DrawingContext.fillStyle = "green";
   Snake.forEach((BodySegment) => {
     DrawingContext.fillRect(
-      BodySegment.gridX * CellSize,
-      BodySegment.gridY * CellSize,
+      BodySegment.GridX * CellSize,
+      BodySegment.GridY * CellSize,
       CellSize,
       CellSize,
     );
@@ -83,8 +88,8 @@ function RenderVisual() {
   // Drawing Food
   DrawingContext.fillStyle = "red";
   DrawingContext.fillRect(
-    Food.gridX * CellSize,
-    Food.gridY * CellSize,
+    Food.GridX * CellSize,
+    Food.GridY * CellSize,
     CellSize,
     CellSize,
   );
