@@ -90,11 +90,13 @@ function GetInput() {
 
 // Updating States
 function UpdateState() {
+  CurrentMovementDirection = NextMovementDirection;
+
   let Head = Snake[0];
 
   let NewHead = {
-    X: Head.GridX + MovementDirection.X,
-    Y: Head.GridY + MovementDirection.Y,
+    X: Head.GridX + CurrentMovementDirection.X,
+    Y: Head.GridY + CurrentMovementDirection.Y,
   };
 
   Snake.unshift(NewHead);
@@ -154,7 +156,7 @@ let LastMoveTime = 0;
 
 // Running the Game
 function ExecuteGame(CurrentTime) {
-  // GetInput();
+  GetInput();
 
   if (CurrentTime - LastMoveTime >= MoveInterval) {
     UpdateState();
