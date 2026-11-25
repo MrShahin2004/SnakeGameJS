@@ -42,9 +42,50 @@ function GenerateRandomFoodPosition() {
 // Food Data
 let Food = GenerateRandomFoodPosition();
 
+// Listening for keyboard inputs
+function ListenKeyDown(KeyboardEvent) {
+  let Key = KeyboardEvent.key.toLowerCase();
+  let RequestedDirection = null;
+
+  switch (Key) {
+    case "arrowup":
+    case "w":
+      RequestedDirection = { X: 0, Y: -1 };
+      break;
+
+    case "arrowleft":
+    case "a":
+      RequestedDirection = { X: -1, Y: 0 };
+      break;
+
+    case "arrowdown":
+    case "s":
+      RequestedDirection = { X: 0, Y: 1 };
+      break;
+
+    case "arrowright":
+    case "d":
+      RequestedDirection = { X: 1, Y: 0 };
+      break;
+
+    default:
+      break;
+  }
+
+  KeyboardEvent.prevenDefault();
+
+  let IsOppositeDirection =
+    RequestedDirection.X === -CurrentMovementDirection.X &&
+    RequestedDirection.Y === -CurrentMovementDirection.Y;
+
+  if (!IsOppositeDirection) {
+    NextMovementDirection = RequestedDirection;
+  }
+}
+
 // Getting Input
 function GetInput() {
-  // Will be implemented later.
+  $.addEventListener("keydown", ListenKeyDown);
 }
 
 // Updating States
